@@ -37,7 +37,7 @@ QD(CZ): T=50ns <-> t_0~10GHZ; T=250 <-> 1GHZ
 
 
 1. noise_std = $k\sigma$, $k=\sqrt{3/2}$怎麼推導
-2. the policy network outputs are then fed into a network, called normal projection network, to generate $\mu_a$ , $\sigma_a$ ( (layer number ? structure)
+2. the policy network outputs are then fed into a network, called normal projection network, to generate $\mu_a$ , $\sigma_a$  (layer number ? structure)
 3. set the initial network parameters of normal projection network to be zeros such that it gives a flat pulse right at the zero line at the beginning
 6. 直接初始化policy network參數，不用projection network
 7. X-gate的noise case只用noise_std=0.1訓練，可以noise_std再調小訓練讓fig 5.1-8之X軸的1e-4到1e-2與4th order重合，還是這樣做會偏離4th order，那可以透過調大$w_{noisy}$來解決嗎? 可以
