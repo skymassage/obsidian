@@ -1,4 +1,3 @@
-
 $H=H_I(t) + H_N$
 
 $$H_I(t)/\hbar = 2\pi
