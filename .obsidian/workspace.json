@@ -13,13 +13,22 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Meeting.md",
+                "file": "ML_Q-control/QD(CNOT).md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "b7f6379c3df484cc",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Meeting.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +110,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Meeting.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +131,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Meeting.md"
-              }
+              "state": {}
             }
           },
           {
@@ -155,13 +160,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "7b640ce46cda8566",
+  "active": "b7f6379c3df484cc",
   "lastOpenFiles": [
+    "ML_Q-control/QD(CNOT).md",
+    "Meeting.md",
     "ML_Q-control/Untitled.md",
     "ML_Q-control/Untitled 1.md",
     "Untitled 1.pdf",
     "ML_Q-control/Untitled 1.pdf",
-    "Meeting.md",
     "QC Note.md",
     "Roadmap.md"
   ]
