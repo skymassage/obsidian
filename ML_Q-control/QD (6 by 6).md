@@ -204,7 +204,6 @@ $$H_I(t)/\hbar = 2\pi
 0 & t_0 & -t_0 & 0 & U-\epsilon & 0\\
 0 & t_0 & -t_0 & 0 & 0 & U+\epsilon\\
 \end{pmatrix}$$
-
 $$H_N/\hbar = 2\pi
 \begin{pmatrix}
 \frac{\xi_{E_{z_1}}+\xi_{E_{z_2}}}{2}  & 0 & 0 & 0 & 0 & 0 \\
@@ -214,6 +213,13 @@ $$H_N/\hbar = 2\pi
 0 & 0 & 0 & 0 & 0 & 0\\
 0 & 0 & 0 & 0 & 0 & 0\\
 \end{pmatrix}
-=2\pi \cdot \frac{1}{2}(\xi_{E_{z_1}}(Z \otimes I) + \xi_{E_{z_2}}(I \times Z))
+=2\pi \cdot \frac{1}{2}(\xi_{E_{z_1}}(Z \otimes I) + \xi_{E_{z_2}}(I \otimes Z))
 =2\pi \cdot \frac{1}{2}(\xi_{E_{z_1}}H_{E_{z_1}}+\xi_{E_{z_1}}H_{E_{z_2}})$$
+$$\mathcal{L}=J_1+<J_2>$$
+$$<J_2>=\frac{1}{2}\sum_{jk}\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 C_{jk}(t_1,t_2) \mathrm{Tr}[(R_j(t_1)R_k(t_2))_{4\times 4}] - \frac{1}{16}\sum_{jk}\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 C_{jk}(t_1,t_2)\mathrm{Tr}[R_{j,4\times 4}(t_1)]\mathrm{Tr}[R_{k,4\times 4}(t_2)]$$
+where $R_j(t)=U_I^{\dagger}(t)H_{N_j} U_I(t)$, $C_{jk}(t_1,t_2)=<\xi_{E_{z_1}}\xi_{E_{z_2}}>$
 
+ Leave out the second term because $H_N$ is traceless
+ $$\begin{align*}<J_2> = \frac{1}{2} &\left( \xi_{E_{z_1}}\xi_{E_{z_1}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_1(t_1)R_1(t_1))_{4 \times 4}] + \xi_{E_{z_2}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_2(t_1)R_2(t_1))_{4 \times 4}] \right.\\
+&\left. \quad + \enspace \xi_{E_{z_1}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_1(t_1)R_2(t_1))_{4 \times 4}] + \beta_{E_{z_1}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_2(t_1)R_1(t_2))_{4 \times 4}] \right)\end{align*}$$
+where $R_1(t)=U_I(t) (Z \otimes I) U_I(t)$, $R_2(t)=U_I(t) (I \otimes Z) U_I(t)$.
