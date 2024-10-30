@@ -273,29 +273,30 @@ $$\begin{aligned}
 &\quad\enspace +\: \left(\int_{0}^{t_f} r_{j,14}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,14}^{\mathrm{Img}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,23}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,23}^{\mathrm{Img}}(t)dt \right)^2 \\
 &\quad\enspace +\: \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Img}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Img}}(t)dt \right)^2\\
 
-&\simeq \left(\frac{t_f}{N}\right)^2 \left[ \frac{1}{8} \Biggl( \sum_{n=0}^{N-1} \left( r_{j,11}(t_n)+r_{j,11}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,22}(t_n)+r_{j,22}(t_{n+1}) \right)^2 
+&\simeq \left(\frac{t_f}{N}\right)^2 \left\{ \frac{1}{8} \Biggl[ \left( \sum_{n=0}^{N-1} r_{j,11}(t_n)+r_{j,11}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,22}(t_n)+r_{j,22}(t_{n+1}) \right)^{\!2}
 \right. \\ &\left.
-\hspace{7.5em} + \sum_{n=0}^{N-1} \left( r_{j,33}(t_n)+r_{j,33}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,44}(t_n)+r_{j,44}(t_{n+1}) \right)^2 \Biggl)
+\hspace{7.5em} + \left( \sum_{n=0}^{N-1} r_{j,33}(t_n)+r_{j,33}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,44}(t_n)+r_{j,44}(t_{n+1}) \right)^{\!2} \Biggl]
 \right. \\ &\left.
-\hspace{5.5em} + \frac{1}{4} \Biggl( \sum_{n=0}^{N-1} \left( r_{j,12}^{\mathrm{Re}}(t_n)+r_{j,12}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,12}^{\mathrm{Img}}(t_n)+r_{j,12}^{\mathrm{Img}}(t_{n+1}) \right)^2
+
+\hspace{5.5em} + \frac{1}{4} \Biggl[ \left( \sum_{n=0}^{N-1} r_{j,12}^{\mathrm{Re}}(t_n)+r_{j,12}^{\mathrm{Re}}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,12}^{\mathrm{Img}}(t_n)+r_{j,12}^{\mathrm{Img}}(t_{n+1}) \right)^{\!2}
 \right. \\ &\left.
-\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,13}^{\mathrm{Re}}(t_n)+r_{j,13}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,13}^{\mathrm{Img}}(t_n)+r_{j,13}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\hspace{8.5em} + \left( \sum_{n=0}^{N-1} r_{j,13}^{\mathrm{Re}}(t_n)+r_{j,13}^{\mathrm{Re}}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,13}^{\mathrm{Img}}(t_n)+r_{j,13}^{\mathrm{Img}}(t_{n+1}) \right)^{\!2}
 \right. \\ &\left.
-\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,14}^{\mathrm{Re}}(t_n)+r_{j,14}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,14}^{\mathrm{Img}}(t_n)+r_{j,14}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\hspace{8.5em} + \left( \sum_{n=0}^{N-1}  r_{j,14}^{\mathrm{Re}}(t_n)+r_{j,14}^{\mathrm{Re}}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,14}^{\mathrm{Img}}(t_n)+r_{j,14}^{\mathrm{Img}}(t_{n+1}) \right)^{\!2}
 \right. \\ &\left.
-\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,23}^{\mathrm{Re}}(t_n)+r_{j,23}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,23}^{\mathrm{Img}}(t_n)+r_{j,23}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\hspace{8.5em} + \left( \sum_{n=0}^{N-1} r_{j,23}^{\mathrm{Re}}(t_n)+r_{j,23}^{\mathrm{Re}}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,23}^{\mathrm{Img}}(t_n)+r_{j,23}^{\mathrm{Img}}(t_{n+1}) \right)^{\!2}
 \right. \\ &\left.
-\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,24}^{\mathrm{Re}}(t_n)+r_{j,24}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,24}^{\mathrm{Img}}(t_n)+r_{j,24}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\hspace{8.5em} + \left( \sum_{n=0}^{N-1} r_{j,24}^{\mathrm{Re}}(t_n)+r_{j,24}^{\mathrm{Re}}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,24}^{\mathrm{Img}}(t_n)+r_{j,24}^{\mathrm{Img}}(t_{n+1}) \right)^{\!2}
 \right. \\ &\left.
-\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,34}^{\mathrm{Re}}(t_n)+r_{j,34}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,34}^{\mathrm{Img}}(t_n)+r_{j,34}^{\mathrm{Img}}(t_{n+1}) \right)^2
-\Biggl)
-\right]
+\hspace{8.5em} + \left( \sum_{n=0}^{N-1} r_{j,34}^{\mathrm{Re}}(t_n)+r_{j,34}^{\mathrm{Re}}(t_{n+1}) \right)^{\!2} + \left( \sum_{n=0}^{N-1} r_{j,34}^{\mathrm{Img}}(t_n)+r_{j,34}^{\mathrm{Img}}(t_{n+1}) \right)^{\!2\;}
+\Biggl]
+\right\}
 \end{aligned}$$
+We can let $I_{j,11} = \sum_{n=0}^{N-1}r_{j,11}(t_n)+r_{j,11}(t_{n+1}), I_{j,12}^{\mathrm{Re}} = \sum_{n=0}^{N-1}r_{j,11}^{\mathrm{Re}}(t_n)+r_{j,11}^{\mathrm{Re}}(t_{n+1})$, and $I_{j,12}^{\mathrm{Img}} = \sum_{n=0}^{N-1}r_{j,11}^{\mathrm{Img}}(t_n)+r_{j,11}^{\mathrm{Img}}(t_{n+1})$$, $\dots$, so
 $$\begin{aligned}&\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 \mathrm{Tr}[R_j(t_1)R_k(t_2)] + \mathrm{Tr}[R_k(t_1)R_j(t_2)] \\
 &= \left(\int_{0}^{t_f}r_{j,11}(t)dt \right) \left(\int_{0}^{t_f}r_{k,11}(t)dt \right) + \left(\int_{0}^{t_f}r_{j,22}(t)dt \right)  \left(\int_{0}^{t_f}r_{k,22}(t)dt \right) \\
 &\quad\enspace + \left(\int_{0}^{t_f}r_{j,33}(t)dt \right) \left(\int_{0}^{t_f}r_{k,33}(t)dt \right)
 + \left(\int_{0}^{t_f}r_{j,44}(t)dt \right)  \left(\int_{0}^{t_f}r_{k,44}(t)dt \right) \\
-
 &\quad\enspace + \; 2\left[ \left(\int_{0}^{t_f} r_{j,12}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,12}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,12}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,12}^{\mathrm{Img}}(t)dt \right) 
 \right.\\ &\left. 
 \qquad\qquad + \left(\int_{0}^{t_f} r_{j,13}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,13}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,13}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,13}^{\mathrm{Img}}(t)dt \right)
@@ -307,6 +308,38 @@ $$\begin{aligned}&\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 \mathrm{Tr}[R_j(t_1)R_k(t
 \qquad\qquad + \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,24}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,24}^{\mathrm{Img}}(t)dt \right)
 \right.\\ &\left. 
 \qquad\qquad + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,34}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,34}^{\mathrm{Img}}(t)dt \right)
+\right] \\
+
+&\simeq \left(\frac{t_f}{N}\right)^2 
+\left[\frac{1}{4}\left( I_{j,11}I_{k,11} + I_{j,22}I_{k,22} + I_{j,33}I_{k,33} + I_{j,44}I_{k,44} \right) + \frac{1}{2}\Bigl( I_{j,12}^{\mathrm{Re}}I_{k,12}^{\mathrm{Re}} + I_{j,12}^{\mathrm{Img}}I_{k,12}^{\mathrm{Img}} + 
+I_{j,13}^{\mathrm{Re}}I_{k,13}^{\mathrm{Re}} + I_{j,13}^{\mathrm{Img}}I_{k,13}^{\mathrm{Img}} 
+\right.\\ &\left.
+\hspace{5.5em} + I_{j,14}^{\mathrm{Re}}I_{k,14}^{\mathrm{Re}} + I_{j,14}^{\mathrm{Img}}I_{k,14}^{\mathrm{Img}} + 
+I_{j,23}^{\mathrm{Re}}I_{k,23}^{\mathrm{Re}} + I_{j,23}^{\mathrm{Img}}I_{k,23}^{\mathrm{Img}}
++ I_{j,24}^{\mathrm{Re}}I_{k,24}^{\mathrm{Re}} + I_{j,24}^{\mathrm{Img}}I_{k,24}^{\mathrm{Img}} + 
+I_{j,34}^{\mathrm{Re}}I_{k,34}^{\mathrm{Re}} + I_{j,34}^{\mathrm{Img}}I_{k,34}^{\mathrm{Img}}
+\Bigl)
 \right]
 \end{aligned}$$
+So
+$$\begin{aligned}<J_2> &\simeq 
+\left(\frac{t_f}{N}\right)^2 \bigg\{
+\xi_{E_{z_1}}\xi_{E_{z_1}} \bigg[\frac{1}{16} (I_{z_1,11}^{2} + I_{z_1,22}^{2} + I_{z_1,33}^{2} + I_{z_1,44}^{2}) + \frac{1}{8}\Big( I_{z_1,12}^{\mathrm{Re}^2} + I_{z_1,12}^{\mathrm{Img^{2}}} + I_{z_1,13}^{\mathrm{Re}^2} + I_{z_1,13}^{\mathrm{Img^{2}}} \\
+&\hspace{9.5em} +\: I_{z_1,14}^{\mathrm{Re}^2} + I_{z_1,14}^{\mathrm{Img^{2}}} + I_{z_1,23}^{\mathrm{Re}^2} + I_{z_1,23}^{\mathrm{Img^{2}}} + I_{z_1,24}^{\mathrm{Re}^2} + I_{z_1,24}^{\mathrm{Img^{2}}} + I_{z_1,34}^{\mathrm{Re}^2} + I_{z_1,34}^{\mathrm{Img^{2}}}
+\Big)\bigg] \\
 
+&\hspace{5.5em} + \: \xi_{E_{z_2}}\xi_{E_{z_2}} \bigg[\frac{1}{16} (I_{z_2,11}^{2} + I_{z_2,22}^{2} + I_{z_2,33}^{2} + I_{z_2,44}^{2}) + \frac{1}{8}\Big( I_{z_2,12}^{\mathrm{Re}^2} + I_{z_2,12}^{\mathrm{Img^{2}}} + I_{z_2,13}^{\mathrm{Re}^2} + I_{z_2,13}^{\mathrm{Img^{2}}} \\
+&\hspace{10.5em} +\: I_{z_2,14}^{\mathrm{Re}^2} + I_{z_2,14}^{\mathrm{Img^{2}}} + I_{z_2,23}^{\mathrm{Re}^2} + I_{z_2,23}^{\mathrm{Img^{2}}} + I_{z_2,24}^{\mathrm{Re}^2} + I_{z_2,24}^{\mathrm{Img^{2}}} + I_{z_2,34}^{\mathrm{Re}^2} + I_{z_2,34}^{\mathrm{Img^{2}}} 
+\Big)\bigg] \\
+
+&\hspace{5.5em} +\: \xi_{E_{z_1}}\xi_{E_{z_2}} \bigg[\frac{1}{8}\left( I_{z_1,11}I_{z_2,11} + I_{z_1,22}I_{z_2,22} + I_{z_1,33}I_{z_2,33} + I_{j,44}I_{z_2,44} \right) \\
+&\hspace{10.5em} + \frac{1}{4}\Bigl( I_{z_1,12}^{\mathrm{Re}}I_{z_2,12}^{\mathrm{Re}} + I_{z_1,12}^{\mathrm{Img}}I_{z_2,12}^{\mathrm{Img}} + 
+I_{z_1,13}^{\mathrm{Re}}I_{z_2,13}^{\mathrm{Re}} + I_{z_1,13}^{\mathrm{Img}}I_{z_2,13}^{\mathrm{Img}}\\
+&\hspace{13em} + I_{z_1,14}^{\mathrm{Re}}I_{z_2,14}^{\mathrm{Re}} + I_{z_1,14}^{\mathrm{Img}}I_{z_2,14}^{\mathrm{Img}} + 
+I_{z_1,23}^{\mathrm{Re}}I_{z_2,23}^{\mathrm{Re}} + I_{z_1,23}^{\mathrm{Img}}I_{z_2,23}^{\mathrm{Img}} \\
+&\hspace{13em} + I_{z_1,24}^{\mathrm{Re}}I_{z_2,24}^{\mathrm{Re}} + I_{z_1,24}^{\mathrm{Img}}I_{z_2,24}^{\mathrm{Img}} + 
+I_{z_1,34}^{\mathrm{Re}}I_{z_2,34}^{\mathrm{Re}} + I_{z_1,34}^{\mathrm{Img}}I_{z_2,34}^{\mathrm{Img}}
+\Bigl)
+\bigg]
+\bigg\}
+\end{aligned}$$

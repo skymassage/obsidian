@@ -35,8 +35,7 @@
               "title": "QD (6 by 6)"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -92,7 +91,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "065f403f27cc1a19",
@@ -188,7 +188,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "dcf29bdc323f16ae",
+  "active": "e396836929b78eab",
   "lastOpenFiles": [
     "quantum_control/schrieff_wolf_approximation.md",
     "quantum_control/QD (6 by 6).md",
