@@ -142,8 +142,8 @@ H_I/\hbar = 2\pi
 \end{pmatrix}
 $$
 where $E_x(t) = \frac{g \mu_B}{\hbar} B_x(t)$. Because $\cos(\overline{E}_z 2\pi t)$ is high-frequency, it will take much time for simulation. We need to do RWA to elminate the high-frequency terms. And we should do SWA first. 
-By the SWT, expand $H_I^{SW}=e^{S}H_I e^{-S}$ to the second order of $S$, i.e.
-$$\tilde{H_I}^{\mathrm{SW}} = H_0 + \frac{1}{2}[S,V] + H_m + [S,H_m] + O(V^3)$$
+By the SWT, expand $H_I^{SW}=e^{S}H_I e^{-S}$ to the second order of $S$ (check [Schreiff-Wolf Approximation](schrieff_wolf_approximation.md)), i.e.
+$$H_I^{\mathrm{SW}} = H_0 + \frac{1}{2}[S,V] + H_m + [S,H_m] + O(V^3)$$
 Omit $O(V^3)$, $\gamma(E_z)-\gamma(-\delta E_z)$, and $\sigma(E_z)-\sigma(-\delta E_z)$ (because of $U-\epsilon \gg \delta E_z$) terms, then
 $$
 \tilde{H_I}^{\mathrm{SWA}}/\hbar = 2\pi \begin{pmatrix}
@@ -171,18 +171,16 @@ $$\tilde{H}_{I,4\times4}^{\mathrm{SWA,\ RWA}}/\hbar = 2 \pi \begin{pmatrix}
 \frac{1}{4} \left(\overline{\Omega}_x(t) + i \overline{\Omega}_y(t)\right) & \beta(\delta E_z)  & -\frac{1}{2} \delta E_z - \alpha(-\delta E_z) & \frac{1}{4} \left(\overline{\Omega}_x(t) - i \overline{\Omega}_y(t)\right)\\
 0 & \frac{1}{4} \left(\overline{\Omega}_x(t) + i \overline{\Omega}_y(t)\right) & \frac{1}{4} \left(\overline{\Omega}_x(t) + i \overline{\Omega}_y(t)\right) & 0
 \end{pmatrix}$$
-, where $\overline{\Omega}_x=\frac{g\mu_B}{\hbar}\Omega_x$ and $\overline{\Omega}_y=\frac{g\mu_B}{\hbar}\Omega_y$.
-
+where $\overline{\Omega}_x=\frac{g\mu_B}{\hbar}\Omega_x$ and $\overline{\Omega}_y=\frac{g\mu_B}{\hbar}\Omega_y$.
 So we can use this approximated Hamiltonian $\tilde{H}_{I,4\times4}^{\mathrm{SWA,\ RWA}}$ for propagating by the Schrödinger equation to get $\tilde{U}_{I,4\times4}^{\mathrm{SWA,\ RWA}}(T)$, and transform it back to $U_I(T)$.
-
 First, transform it from the rotating frame back to the frame transformed by the SW transformation
 $$\tilde{U}_{I,4\times4}^{\mathrm{SWA}}(T) = {U_0}^\dagger(T) \tilde{U}_{I,4\times4}^{\mathrm{SWA,\ RWA}}(T) \enspace$$
 $$\tilde{U_I}^{\mathrm{SWA}}(T)
 =\begin{pmatrix} \tilde{U}_{I,4\times4}^{\mathrm{SWA}}(T)\\ & 1 & 0 \\ & 0 & 1 \end{pmatrix}
-\begin{pmatrix} 1&0&0&0&\\ 0&1&0&0&\\ 0&0&1&0&\\ 0&0&0&1&\\ &&&& e^{-i2\pi \begin{pmatrix}(U-\epsilon) + t_0(\gamma(\delta E_z)+\gamma(-\delta E_z)) & \beta(\delta E_z) \\\\ \beta(\delta E_z) & (U+\epsilon) + t_0(\sigma(\delta E_z)+\sigma(-\delta E_z))\end{pmatrix} T} \end{pmatrix}
+\begin{pmatrix} 1&0&0&0&\\ 0&1&0&0&\\ 0&0&1&0&\\ 0&0&0&1&\\ &&&& e^{-i2\pi T \begin{pmatrix}(U-\epsilon) + t_0(\gamma(\delta E_z)+\gamma(-\delta E_z)) & \beta(\delta E_z) \\\\ \beta(\delta E_z) & (U+\epsilon) + t_0(\sigma(\delta E_z)+\sigma(-\delta E_z))\end{pmatrix}} \end{pmatrix}
 =\begin{pmatrix}
-\begin{matrix} \\ && \tilde{U}_{4\times4}^{\mathrm{SWA}}(T) & \\ \\ \\ 0&0&0&0 \\ 0&0&0&0 \end{matrix} &
-\begin{matrix} 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\  e^{-i2\pi \begin{pmatrix}(U-\epsilon) + t_0(\gamma(\delta E_z)+\gamma(-\delta E_z)) & \beta(\delta E_z) \\\\ \beta(\delta E_z) & (U+\epsilon) + t_0(\sigma(\delta E_z)+\sigma(-\delta E_z))\end{pmatrix} T} \end{matrix}
+\begin{matrix} \\ && \tilde{U}_{I,4\times4}^{\mathrm{SWA}}(T) & \\ \\ \\ 0&0&0&0 \\ 0&0&0&0 \end{matrix} &
+\begin{matrix} 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\  e^{-i2\pi T \begin{pmatrix}(U-\epsilon) + t_0(\gamma(\delta E_z)+\gamma(-\delta E_z)) & \beta(\delta E_z) \\\\ \beta(\delta E_z) & (U+\epsilon) + t_0(\sigma(\delta E_z)+\sigma(-\delta E_z))\end{pmatrix}} \end{matrix}
 \end{pmatrix}$$
 Finally, expand the SW transformation $U_I = e^{-S} U_I^{\mathrm{SW}} e^S$ to the second order of $S$ to transform back the original frame
 $$\begin{aligned}
@@ -194,7 +192,7 @@ Here the gate time $T=100\mathrm{ns}$, $t_0=5000\mathrm{MHz}$, $U=6000\mathrm{GH
 
 ### Dephasing noise
 Now consider the dephasing noise, we sample the quasi-static noise $\xi_{E_{z_1}}, \xi_{E_{z_2}}$ with the standard deviation $6.5\mathrm{MHz}$, so add $E_{z_1} \rightarrow E_{z_1} + \xi_{E_{z_1}}$ and $E_{z_2} \rightarrow E_{z_2} + \xi_{E_{z_2}}$ to the Hamiltonian:
-$$H(t)=H_I(t)+H_N$$
+$$H(t)=H_I(t)+H_N = H_\epsilon + H_t + H_U + H_Z + H_m(t)+H_N$$
 $$H_I(t)/\hbar = 2\pi
 \begin{pmatrix}
 \overline{E}_z  & \frac{1}{2} E_x(t) & \frac{1}{2} E_x(t) & 0 & 0 & 0 \\
@@ -215,11 +213,100 @@ $$H_N/\hbar = 2\pi
 \end{pmatrix}
 =2\pi \cdot \frac{1}{2}(\xi_{E_{z_1}}(Z \otimes I) + \xi_{E_{z_2}}(I \otimes Z))
 =2\pi \cdot \frac{1}{2}(\xi_{E_{z_1}}H_{E_{z_1}}+\xi_{E_{z_1}}H_{E_{z_2}})$$
+With SWT (note that $H_{N}$ is diagonal so directly add it to $\tilde{H}_{I}^{SW}$):
+$$\tilde{H}^{\mathrm{SW}} = H_0 + H_N + \frac{1}{2}[S,V] + H_m + [S,H_m] = \tilde{H}_{I}^{SW}+H_N$$
+and RWA (neglect the high frequency terms $e^{\pm i(2\overline{E}_{z} + \xi_{avg}) 2\pi t}$ and $e^{\pm i(2\overline{E}_{z} + \xi_{avg}) 2\pi t + \frac{\pi}{2}}$:
+$$\tilde{H}_{4\times 4}^{\mathrm{SWA,\ RF}}=U_{0}^{\dagger}(t)\tilde{H}_{4\times 4}^{\mathrm{SWA}}U_{0}(t) - i\hbar U_{0}^{\dagger}(t) \dot{U}_{0}^(t)$$
+We have
+$$\tilde{H}_{4\times4}^{\mathrm{SWA,\ RWA}}/\hbar = 2 \pi \begin{pmatrix}
+\xi_{avg} & \frac{1}{4} \left(\overline{\Omega}_x(t) - i \overline{\Omega}_y(t)\right) & \frac{1}{4} \left(\overline{\Omega}_x(t) - i \overline{\Omega}_y(t)\right) & 0\\
+\frac{1}{4} \left(\overline{\Omega}_x(t) + i \overline{\Omega}_y(t)\right) & \frac{1}{2} (\delta E_z + \xi_{sub}) - \alpha(\delta E_z) & \beta(\delta E_z) & \frac{1}{4}  \left(\overline{\Omega}_x(t) - i \overline{\Omega}_y(t)\right)\\
+\frac{1}{4} \left(\overline{\Omega}_x(t) + i \overline{\Omega}_y(t)\right) & \beta(\delta E_z)  & -\frac{1}{2} (\delta E_z + \xi_{sub}) - \alpha(-\delta E_z) & \frac{1}{4} \left(\overline{\Omega}_x(t) - i \overline{\Omega}_y(t)\right)\\
+0 & \frac{1}{4} \left(\overline{\Omega}_x(t) + i \overline{\Omega}_y(t)\right) & \frac{1}{4} \left(\overline{\Omega}_x(t) + i \overline{\Omega}_y(t)\right) & -\xi_{avg}
+\end{pmatrix},$$
+where $\xi_{avg} = \frac{\xi_{E_{z_1}} + \xi_{E_{z_1}}}{2}, \xi_{sub} = \xi_{E_{z_1}} - \xi_{E_{z_1}}$.
+Transform it from the rotating frame back to the frame transformed by the SW transformation and expand the SW transformation $U = e^{-S} U^{\mathrm{SW}} e^S$ to the second order of $S$ to transform back the original frame
+$$\tilde{U}_{4\times4}^{\mathrm{SWA}}(T) = {U_0}^\dagger(T) \tilde{U}_{4\times4}^{\mathrm{SWA,\ RWA}}(T) \enspace$$
+$$\tilde{U}^{\mathrm{SWA}}(T)
+=\begin{pmatrix}
+\begin{matrix} \\ && \tilde{U}_{4\times4}^{\mathrm{SWA}}(T) & \\ \\ \\ 0&0&0&0 \\ 0&0&0&0 \end{matrix} &
+\begin{matrix} 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\ 0\qquad\qquad\qquad\qquad\qquad0 \\  e^{-i2\pi T \begin{pmatrix}(U-\epsilon) + t_0(\gamma(\delta E_z)+\gamma(-\delta E_z)) & \beta(\delta E_z) \\\\ \beta(\delta E_z) & (U+\epsilon) + t_0(\sigma(\delta E_z)+\sigma(-\delta E_z))\end{pmatrix}} \end{matrix}
+\end{pmatrix}$$
+$$\begin{aligned}
+U(T) &\simeq e^{-S} U^{\mathrm{SWA}}(T) e^S\\
+&\simeq \tilde{U}^{\mathrm{SWA}}(T) + [-S, \tilde{U}^{\mathrm{SWA}}(T)]+\frac{1}{2}[-S, [-S, \tilde{U}^{\mathrm{SWA}}(T)]]\\
+&\simeq U^{\mathrm{SWA}}(T) + U^{\mathrm{SWA}}(T)S-SU^{\mathrm{SWA}}(T) + \frac{1}{2}(S^2U^{\mathrm{SWA}}(T)-U^{\mathrm{SWA}}(T)S^2)
+\end{aligned}$$
+Employ the robust control method to minimize the cost function:
 $$\mathcal{L}=J_1+<J_2>$$
+$$J_1=1-\frac{|\mathrm{Tr}[U_{T}^{{\dagger}}U_{I,4\times 4}(t_{f})|^2}{16}$$
 $$<J_2>=\frac{1}{2}\sum_{jk}\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 C_{jk}(t_1,t_2) \mathrm{Tr}[(R_j(t_1)R_k(t_2))_{4\times 4}] - \frac{1}{16}\sum_{jk}\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 C_{jk}(t_1,t_2)\mathrm{Tr}[R_{j,4\times 4}(t_1)]\mathrm{Tr}[R_{k,4\times 4}(t_2)]$$
-where $R_j(t)=U_I^{\dagger}(t)H_{N_j} U_I(t)$, $C_{jk}(t_1,t_2)=<\xi_{E_{z_1}}\xi_{E_{z_2}}>$
+where $R_j(t)=U_I^{\dagger}(t)H_{N_j} U_I(t)$, $C_{jk}(t_1,t_2)=<\xi_{E_{z_1}}\xi_{E_{z_2}}>$. Leave out the second term because $H_N$ is traceless, so $$\begin{aligned}<J_2> = \frac{1}{2} &\left( \xi_{E_{z_1}}\xi_{E_{z_1}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_1(t_1)R_1(t_2))_{4 \times 4}] + \xi_{E_{z_2}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_2(t_1)R_2(t_2))_{4 \times 4}] 
+\right.\\ &\left.
+\quad + \enspace \xi_{E_{z_1}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_1(t_1)R_2(t_2))_{4 \times 4}] + \xi_{E_{z_1}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_2(t_1)R_1(t_2))_{4 \times 4}] \right)\end{aligned}$$
+where $R_1(t)=U_I^{\dagger}(t) (Z \otimes I) U_I(t)$, $R_2(t)=U_I^{\dagger}(t) (I \otimes Z) U_I(t)$.
+Use $\tilde{H}_{I, 4\times4}^{\mathrm{SWA,\ RWA}}$ to optimize $\mathcal{L}$ without transforming the propagator back to the original frame and then obtain the optimal pulse. Use $\tilde{H}_{4\times4}^{\mathrm{SWA,\ RWA}}$ for testing and the propagators should be transformed back to the original frame to get the average infidelity.
+Because $H_{E_{z_1}}=Z\otimes I$ and $H_{E_{z_2}}=I\otimes Z$, so
+$$R_{j}(t) =\begin{pmatrix}
+r_{j,11}(t) & r_{j,12}(t) & r_{j,13}(t)& r_{j,14}(t) \\ 
+r_{j,12}^{*}(t) & r_{j,22}(t) & r_{j,23}(t)& r_{j,24}(t) \\
+r_{j,13}^{*}(t) & r_{j,23}^{*}(t) & r_{j,33}(t)& r_{j,34}(t) \\
+r_{j,14}^{*}(t) & r_{j,24}^{*}(t) & r_{j,34}^{*}(t)& r_{j,44}(t)
+\end{pmatrix}$$
+$$\begin{aligned}\mathrm{Tr}[R_j(t_1)R_k(t_2)] &=
+r_{j,11}(t_1)r_{k,11}(t_2)
++ r_{j,22}(t_1)r_{k,22}(t_2)
++ r_{j,33}(t_1)r_{k,33}(t_2)
++ r_{j,44}(t_1)r_{k,44}(t_2)\\
+&\quad + \;2\: [r_{j,12}^{\mathrm{Re}}(t_1) r_{k,12}^{\mathrm{Re}}(t_2) + r_{j,12}^{\mathrm{Img}}(t_1) r_{k,12}^{\mathrm{Img}}(t_2)
++ r_{j,13}^{\mathrm{Re}}(t_1) r_{k,13}^{\mathrm{Re}}(t_2) + r_{j,13}^{\mathrm{Img}}(t_1) r_{k,13}^{\mathrm{Img}}(t_2)\\
+&\qquad\quad + \enspace r_{j,14}^{\mathrm{Re}}(t_1) r_{k,14}^{\mathrm{Re}}(t_2) + r_{j,14}^{\mathrm{Img}}(t_1) r_{k,14}^{\mathrm{Img}}(t_2)
++ r_{j,23}^{\mathrm{Re}}(t_1) r_{k,23}^{\mathrm{Re}}(t_2) + r_{j,23}^{\mathrm{Img}}(t_1) r_{k,23}^{\mathrm{Img}}(t_2)\\
+&\qquad\quad + \enspace r_{j,24}^{\mathrm{Re}}(t_1) r_{k,24}^{\mathrm{Re}}(t_2) + r_{j,24}^{\mathrm{Img}}(t_1) r_{k,24}^{\mathrm{Img}}(t_2)
++ r_{j,34}^{\mathrm{Re}}(t_1) r_{k,34}^{\mathrm{Re}}(t_2) + r_{j,34}^{\mathrm{Img}}(t_1) r_{k,34}^{\mathrm{Img}}(t_2)]
+\end{aligned}$$
 
- Leave out the second term because $H_N$ is traceless
- $$\begin{align*}<J_2> = \frac{1}{2} &\left( \xi_{E_{z_1}}\xi_{E_{z_1}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_1(t_1)R_1(t_1))_{4 \times 4}] + \xi_{E_{z_2}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_2(t_1)R_2(t_1))_{4 \times 4}] \right.\\
-&\left. \quad + \enspace \xi_{E_{z_1}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_1(t_1)R_2(t_1))_{4 \times 4}] + \beta_{E_{z_1}}\xi_{E_{z_2}} \int_{0}^{t_f}dt_1 \int_0^{t_1}dt_2\mathrm{Tr}[(R_2(t_1)R_1(t_2))_{4 \times 4}] \right)\end{align*}$$
-where $R_1(t)=U_I(t) (Z \otimes I) U_I(t)$, $R_2(t)=U_I(t) (I \otimes Z) U_I(t)$.
+$$\begin{aligned}
+&\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 \mathrm{Tr}[R_j(t_1)R_j(t_2)] \\
+&= \frac{1}{2}\left[\left(\int_{0}^{t_f} r_{j,11}(t) dt \right)^2 + \left(\int_{0}^{t_f} r_{j,22}(t) dt \right)^2 + \left(\int_{0}^{t_f} r_{j,33}(t) dt \right)^2 + \left(\int_{0}^{t_f} r_{j,44}(t) dt \right)^2 \right] \\
+&\quad\enspace +\: \left(\int_{0}^{t_f} r_{j,12}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,12}^{\mathrm{Img}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,13}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,13}^{\mathrm{Img}}(t)dt \right)^2 \\
+&\quad\enspace +\: \left(\int_{0}^{t_f} r_{j,14}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,14}^{\mathrm{Img}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,23}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,23}^{\mathrm{Img}}(t)dt \right)^2 \\
+&\quad\enspace +\: \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Img}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Re}}(t)dt \right)^2 + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Img}}(t)dt \right)^2\\
+
+&\simeq \left(\frac{t_f}{N}\right)^2 \left[ \frac{1}{8} \Biggl( \sum_{n=0}^{N-1} \left( r_{j,11}(t_n)+r_{j,11}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,22}(t_n)+r_{j,22}(t_{n+1}) \right)^2 
+\right. \\ &\left.
+\hspace{7.5em} + \sum_{n=0}^{N-1} \left( r_{j,33}(t_n)+r_{j,33}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,44}(t_n)+r_{j,44}(t_{n+1}) \right)^2 \Biggl)
+\right. \\ &\left.
+\hspace{5.5em} + \frac{1}{4} \Biggl( \sum_{n=0}^{N-1} \left( r_{j,12}^{\mathrm{Re}}(t_n)+r_{j,12}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,12}^{\mathrm{Img}}(t_n)+r_{j,12}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\right. \\ &\left.
+\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,13}^{\mathrm{Re}}(t_n)+r_{j,13}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,13}^{\mathrm{Img}}(t_n)+r_{j,13}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\right. \\ &\left.
+\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,14}^{\mathrm{Re}}(t_n)+r_{j,14}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,14}^{\mathrm{Img}}(t_n)+r_{j,14}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\right. \\ &\left.
+\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,23}^{\mathrm{Re}}(t_n)+r_{j,23}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,23}^{\mathrm{Img}}(t_n)+r_{j,23}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\right. \\ &\left.
+\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,24}^{\mathrm{Re}}(t_n)+r_{j,24}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,24}^{\mathrm{Img}}(t_n)+r_{j,24}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\right. \\ &\left.
+\hspace{8.5em} + \sum_{n=0}^{N-1} \left( r_{j,34}^{\mathrm{Re}}(t_n)+r_{j,34}^{\mathrm{Re}}(t_{n+1}) \right)^2 + \sum_{n=0}^{N-1} \left( r_{j,34}^{\mathrm{Img}}(t_n)+r_{j,34}^{\mathrm{Img}}(t_{n+1}) \right)^2
+\Biggl)
+\right]
+\end{aligned}$$
+$$\begin{aligned}&\int_{0}^{t_f}dt_1\int_{0}^{t_1}dt_2 \mathrm{Tr}[R_j(t_1)R_k(t_2)] + \mathrm{Tr}[R_k(t_1)R_j(t_2)] \\
+&= \left(\int_{0}^{t_f}r_{j,11}(t)dt \right) \left(\int_{0}^{t_f}r_{k,11}(t)dt \right) + \left(\int_{0}^{t_f}r_{j,22}(t)dt \right)  \left(\int_{0}^{t_f}r_{k,22}(t)dt \right) \\
+&\quad\enspace + \left(\int_{0}^{t_f}r_{j,33}(t)dt \right) \left(\int_{0}^{t_f}r_{k,33}(t)dt \right)
++ \left(\int_{0}^{t_f}r_{j,44}(t)dt \right)  \left(\int_{0}^{t_f}r_{k,44}(t)dt \right) \\
+
+&\quad\enspace + \; 2\left[ \left(\int_{0}^{t_f} r_{j,12}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,12}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,12}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,12}^{\mathrm{Img}}(t)dt \right) 
+\right.\\ &\left. 
+\qquad\qquad + \left(\int_{0}^{t_f} r_{j,13}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,13}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,13}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,13}^{\mathrm{Img}}(t)dt \right)
+\right.\\ &\left. 
+\qquad\qquad + \left(\int_{0}^{t_f} r_{j,14}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,14}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,14}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,14}^{\mathrm{Img}}(t)dt \right)
+\right.\\ &\left. 
+\qquad\qquad + \left(\int_{0}^{t_f} r_{j,23}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,23}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,23}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,23}^{\mathrm{Img}}(t)dt \right)
+\right.\\ &\left. 
+\qquad\qquad + \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,24}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,24}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,24}^{\mathrm{Img}}(t)dt \right)
+\right.\\ &\left. 
+\qquad\qquad + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Re}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,34}^{\mathrm{Re}}(t)dt \right) + \left(\int_{0}^{t_f} r_{j,34}^{\mathrm{Img}}(t)dt \right) \left(\int_{0}^{t_f} r_{k,34}^{\mathrm{Img}}(t)dt \right)
+\right]
+\end{aligned}$$
+

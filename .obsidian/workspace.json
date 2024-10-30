@@ -8,27 +8,31 @@
         "type": "tabs",
         "children": [
           {
-            "id": "be871127f5ac7b69",
+            "id": "e396836929b78eab",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML_Q-control/QD (6 by 6).md",
+                "file": "quantum_control/QD (6 by 6).md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "QD (6 by 6)"
             }
           },
           {
-            "id": "4ce3df1fa7875561",
+            "id": "dcf29bdc323f16ae",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ML_Q-control/Untitled.md",
+                "file": "quantum_control/QD (6 by 6).md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "QD (6 by 6)"
             }
           }
         ],
@@ -52,7 +56,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -67,7 +73,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -75,7 +83,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -98,7 +108,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ML_Q-control/Untitled.md",
+                "file": "quantum_control/QD (6 by 6).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -106,7 +116,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for QD (6 by 6)"
             }
           },
           {
@@ -115,10 +127,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ML_Q-control/Untitled.md",
+                "file": "quantum_control/QD (6 by 6).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from QD (6 by 6)"
             }
           },
           {
@@ -129,7 +143,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -138,8 +154,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ML_Q-control/Untitled.md"
-              }
+                "file": "quantum_control/QD (6 by 6).md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of QD (6 by 6)"
             }
           },
           {
@@ -147,7 +165,9 @@
             "type": "leaf",
             "state": {
               "type": "git-view",
-              "state": {}
+              "state": {},
+              "icon": "lucide-file",
+              "title": "Plugin no longer active"
             }
           }
         ],
@@ -168,13 +188,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "4ce3df1fa7875561",
+  "active": "dcf29bdc323f16ae",
   "lastOpenFiles": [
-    "ML_Q-control/QD (6 by 6).md",
-    "ML_Q-control/QD(CNOT).md",
-    "ML_Q-control/Untitled.md",
-    "ML_Q-control/Untitled 1.md",
+    "quantum_control/schrieff_wolf_approximation.md",
+    "quantum_control/QD (6 by 6).md",
+    "quantum_control/Untitled.md",
+    "schrieff_wolf_approximation.md",
     "Meeting.md",
+    "markdown_example/[[ex2]].md",
+    "markdown_example/[[/ex2.md]].md",
+    "markdown_example/[[",
+    "markdown_example/ex1 1.md",
+    "markdown_example/ex2 1.md",
+    "quantum_control/QD(CNOT).md",
+    "ML_Q-control/Untitled 1.md",
     "Untitled 1.pdf",
     "ML_Q-control/Untitled 1.pdf",
     "QC Note.md",

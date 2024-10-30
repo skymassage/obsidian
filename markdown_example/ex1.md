@@ -106,7 +106,7 @@ Internal link:
 [example_image](/example.png)
 
 Use `[[markdown_file]]` to link to another markdown file: [[ex2]]
-Or use text as the link another markdown file: [Click here](\ex2.md)
+Or use text as the link another markdown file: [Click here](/ex2)
 
 ---
 
@@ -129,9 +129,9 @@ Images are almost identical to links, but an image starts with an exclamation po
 ```
 Alternate (alt) text is displayed when the image can't be shown, or for the visually impaired. It's fine to leave this blank but the `[]` is required.
 
-Ex: 
-![Markdown](C:\Main\Projects\GitHub\note\markdown_example\example.png)
-If the URL is invalid, it will show the alt: ![Markdown](/example.png)
+Ex: ![Markdown](example.png)
+If the URL is invalid, it will show the alt:
+![Markdown](C:\Main\Projects\GitHub\obsidian\markdown_example\example)
 
 ---
 
