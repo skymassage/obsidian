@@ -19,5 +19,5 @@ H'&=e^S H e^{-S}\\
 &= H_0 + \epsilon(V+W+[S,H_0])+\epsilon^2([S,V+W]+\frac{1}{2}[S,[S,H_0]])+\cancelto{O(V^3)}{\frac{\epsilon^3}{2}[S,[S,V+W]] + O(S^3)}\\
 &= H_0 + \epsilon(V+[S,H_0]) + \epsilon^2([S,V]+\frac{1}{2}[S,[S,H_0]]) +\epsilon W + \epsilon^2[S,W] + O(V^3)
 \end{aligned}$$
-Sinilarly, choosing the generator S such that $V+[S,H_0]=0$ and omit $O(V^3)$
+Similarly, choosing the generator S such that $V+[S,H_0]=0$ and omit $O(V^3)$
 $$H'\simeq H_ 0+ \frac{\epsilon^2}{2}[S,V] + \epsilon W + \epsilon^2[S,W]$$

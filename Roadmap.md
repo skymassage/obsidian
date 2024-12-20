@@ -5,7 +5,6 @@ change careers
 internship
 
 # Websites
-Job websites:
 SimplyHired
 ZipRecruiter
 Reed
@@ -20,23 +19,20 @@ What kind of job are you looking for: Backend, Data Science, ML, Quantum computi
 # Skills
 In-demand:
 Password Manager
-Python, C++(Boost C++ Libraries), JAVA
+C++, JAVA
 ML(PyTorch)
-Version Control: Git
-Obsidian + Git (GitHub)
 Vim
 Linux, UNIX
 Familiarity with Servers: Docker, K8S
 Unit Testing
 GNU Make, CMake
-
 CI/CD: Jenkins, Gradle, Maven, Ansible, GitHub Actions, GitLab CI
-
 Server: Apache, Nginx
-
 SonarQube
- 
 
+Python
+Version Control: Git
+Docker
 
 Backend:
 HTML跟CSS跟JavaScript
